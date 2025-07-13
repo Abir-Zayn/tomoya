@@ -1,24 +1,27 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input';
 
-interface UploadFormInputprops {
+interface UploadFormInputProps {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-function UploadFormInput({ onSubmit }: UploadFormInputprops) {
+function UploadFormInput({ onSubmit }: UploadFormInputProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   return (
     <form className="flex flex-col gap-6" onSubmit={onSubmit}>
-      <div className="flex justify-end items-center gap-4">
+      <div className="flex flex-col sm:flex-row justify-end items-center gap-4">
         <input
           id="file"
           type="file"
           name="file"
+          ref={fileInputRef}
           accept="application/pdf"
-          className="flex-1 p-2 border rounded"
+          className="flex-1 p-2 border rounded w-full"
+          required
         />
-        <Button> Upload your PDF</Button>
+        <Button type="submit">Upload your PDF</Button>
       </div>
     </form>
   );

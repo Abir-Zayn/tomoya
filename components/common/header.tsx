@@ -1,6 +1,6 @@
 import { BookOpen } from 'lucide-react';
 import React from 'react';
-import { Button } from '../ui/button';
+
 import NavLink from './nav-link';
 import { ThemeToggle } from '../theme-toggle';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
