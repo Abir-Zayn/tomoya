@@ -47,7 +47,7 @@ export default function HeroSection() {
 
         {/* Sub heading - changed to text-gray-600 */}
         <div className="animate-fade-in-up delay-400">
-          <h2 className="text-lg sm:text-xl lg:text-2xl text-center px-4 lg:px-0 max-w-4xl text-gray-600 leading-relaxed">
+          <h2 className="text-lg sm:text-xl lg:text-2xl text-center px-4 lg:px-0 max-w-4xl text-muted-foreground leading-relaxed">
             Get a beautiful summary reel of your document in{' '}
             <span className="text-primary font-semibold">seconds</span> with
             AI-powered intelligence

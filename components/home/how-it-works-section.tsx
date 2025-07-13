@@ -34,7 +34,7 @@ const steps: Step[] = [
 
 function HowItWorkSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50/50 to-background py-20 lg:py-32">
+    <section className="relative overflow-hidden  py-20 lg:py-32">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -52,7 +52,7 @@ function HowItWorkSection() {
             in three simple steps
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our AI-powered platform makes document summarization effortless and
             lightning-fast
           </p>
@@ -89,7 +89,7 @@ function StepItem({ icon, label, description, step }: Step) {
   return (
     <div className="relative group">
       {/* Card - removed shadows */}
-      <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-primary/30 transition-all duration-500 h-full">
+      <div className="relative p-8 rounded-3xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/30 transition-all duration-500 h-full">
         {/* Icon container */}
         <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 group-hover:from-primary/20 group-hover:via-accent/20 group-hover:to-secondary/20 transition-all duration-500">
           <div className="text-primary group-hover:scale-110 transition-transform duration-300">
@@ -99,10 +99,10 @@ function StepItem({ icon, label, description, step }: Step) {
 
         {/* Content */}
         <div className="text-center space-y-4">
-          <h3 className="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
             {label}
           </h3>
-          <p className="text-gray-600 leading-relaxed">{description}</p>
+          <p className="text-muted-foreground leading-relaxed">{description}</p>
         </div>
 
         {/* Hover effect overlay */}

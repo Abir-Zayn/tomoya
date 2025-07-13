@@ -2,6 +2,7 @@ import { BookOpen } from 'lucide-react';
 import React from 'react';
 import { Button } from '../ui/button';
 import NavLink from './nav-link';
+import { ThemeToggle } from '../theme-toggle';
 
 function header() {
   const isLoggedIn = false; // Replace with actual authentication logic
@@ -12,10 +13,10 @@ function header() {
         <NavLink href="/" className="flex items-center gap-1 lg:gap-2 shrink-0">
           <BookOpen
             className="w-5 h-5 lg:w-8 lg:h-8 
-            text-gray-900 hover:rotate-12 transform transition duration-200 ease-in-out
+            text-foreground hover:rotate-12 transform transition duration-200 ease-in-out
             "
           />
-          <span className="font-extrabold lg:text-xl text-gray-900">
+          <span className="font-extrabold lg:text-xl text-foreground">
             Tomoya
           </span>
         </NavLink>
@@ -32,7 +33,7 @@ function header() {
       </div>
 
       {/* Login Section */}
-      <div className="flex lg:justify-end lg:flex-1">
+      <div className="flex lg:justify-end lg:flex-1 items-center gap-3">
         {isLoggedIn ? (
           <div className="flex gap-2 items-center">
             <NavLink href="/upload">Upload a PDF</NavLink>
@@ -40,9 +41,12 @@ function header() {
             <Button>Profile</Button>
           </div>
         ) : (
-          <NavLink href="/sign-in" className="ml-4">
-            Sign In
-          </NavLink>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <NavLink href="/sign-in" className="">
+              Sign In
+            </NavLink>
+          </div>
         )}
       </div>
     </nav>
