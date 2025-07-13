@@ -3,9 +3,9 @@ import React from 'react';
 import { Button } from '../ui/button';
 import NavLink from './nav-link';
 import { ThemeToggle } from '../theme-toggle';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 function header() {
-  const isLoggedIn = false; // Replace with actual authentication logic
   return (
     <nav className="container flex items-center justify-between py-4 lg:px-8 px-2 mx-auto">
       <div className="flex lg:flex-1">
@@ -25,29 +25,36 @@ function header() {
       {/* Pricing Section */}
       <div className="flex lg:justify-center gap-4 lg:gap-12 lg:items-center">
         <NavLink href="/#pricing">Pricing</NavLink>
-        {isLoggedIn && (
-          <NavLink href="/#dashboard" className="ml-4">
-            Your Summaries
-          </NavLink>
-        )}
+        {
+          //if user is logged in, show the dashboard link
+          <SignedIn>
+            <NavLink href="/#dashboard" className="ml-4">
+              Your Summaries
+            </NavLink>
+          </SignedIn>
+        }
       </div>
 
       {/* Login Section */}
       <div className="flex lg:justify-end lg:flex-1 items-center gap-3">
-        {isLoggedIn ? (
+        <SignedIn>
           <div className="flex gap-2 items-center">
             <NavLink href="/upload">Upload a PDF</NavLink>
             <div>Pro </div>
-            <Button>Profile</Button>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
-        ) : (
+        </SignedIn>
+
+        <SignedOut>
           <div className="flex items-center gap-3">
-            <ThemeToggle />
             <NavLink href="/sign-in" className="">
               Sign In
             </NavLink>
           </div>
-        )}
+        </SignedOut>
+        <ThemeToggle />
       </div>
     </nav>
   );
