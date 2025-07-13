@@ -46,7 +46,7 @@ function HowItWorkSection() {
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
             Transform any PDF into an{' '}
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-indigo-600">
               easy-to-digest summary
             </span>{' '}
             in three simple steps

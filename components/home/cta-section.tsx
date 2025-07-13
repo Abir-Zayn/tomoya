@@ -14,14 +14,14 @@ export default function CTASection() {
         <div className="text-center space-y-8">
           {/* Enhanced header section */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-indigo-600 font-medium text-sm">
               <Zap className="h-4 w-4" />
               <span>Ready to get started?</span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               Save Hours of{' '}
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-indigo-600">
                 Reading Time
               </span>
             </h2>
@@ -29,7 +29,7 @@ export default function CTASection() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Join thousands of professionals who trust Tomoya to transform
               their document workflow.{' '}
-              <span className="text-primary font-semibold">
+              <span className="text-indigo-600 font-semibold">
                 Start summarizing today!
               </span>
             </p>

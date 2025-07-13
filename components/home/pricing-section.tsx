@@ -107,7 +107,7 @@ const PricingCard = ({
             'w-full rounded-full flex items-center justify-center gap-2 py-3 px-6 font-semibold transition-colors duration-300',
             isPro
               ? 'bg-gradient-to-r from-purple-800 to-rose-500 hover:from-rose-700 hover:to-rose-400 text-white'
-              : 'border-2 border-primary text-primary'
+              : 'border-2 border-indigo-600 text-indigo-600'
           )}
         >
           <span>Subscribe Now</span>
@@ -131,7 +131,7 @@ function PricingSection() {
         {/* Enhanced section header */}
         <div className="text-center mb-16 space-y-6">
           {/* Badge indicator */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full text-purple-700 font-medium text-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-rose-100 rounded-full text-indigo-600 font-medium text-sm">
             <Zap className="h-4 w-4" />
             <span>Simple Pricing</span>
           </div>
@@ -139,7 +139,7 @@ function PricingSection() {
           {/* Main heading with enhanced styling */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             Choose Your{' '}
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-indigo-600">
               Perfect Plan
             </span>
           </h2>

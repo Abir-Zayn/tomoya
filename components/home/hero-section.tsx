@@ -17,10 +17,13 @@ export default function HeroSection() {
         <div className="relative animate-fade-in-up">
           <Badge
             variant={'outline'}
-            className="bg-background/80 backdrop-blur-md border-2 border-primary/30 text-foreground px-8 py-4 text-sm font-medium rounded-full hover:border-primary/60 hover:bg-primary/5 transition-all duration-500 shadow-lg hover:shadow-xl group"
+            className="bg-background/80 backdrop-blur-md border-2 border border-indigo-600 text-foreground px-8 py-4 text-sm font-medium rounded-full hover:border-primary/60 hover:bg-primary/5 transition-all duration-500 shadow-lg hover:shadow-xl group"
           >
-            <Sparkles className="h-4 w-4 mr-3 animate-spin-slow text-primary group-hover:animate-pulse" />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-semibold">
+            <Sparkles
+              size={12}
+              className="h-4 w-4 mr-3 animate-spin-slow text-indigo-600 group-hover:animate-pulse"
+            />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-indigo-600 font-semibold">
               Powered by AI
             </span>
           </Badge>
