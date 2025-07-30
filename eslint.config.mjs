@@ -9,15 +9,15 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = {
+const eslintConfig = [
   ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+    extends: ["next/core-web-vitals", "prettier"],
     plugins: ["prettier"],
     rules: {
       "prettier/prettier": "error",
       "react/no-scope-entities": "off", // Next.js does not require React to be in scope
     },
   }),
-};
+];
 
 export default eslintConfig;
